@@ -1,0 +1,77 @@
+/* RESET E FORMATOS PADRÕES*/
+*{
+    margin: 0; padding: 0;
+}
+body{
+	font-size: 14px;
+	font-weight: 400;
+	background-color: #16171a;
+	font-family: Arial, helvetica, sans serif;
+	color: #fff;
+}
+nav {
+	box-shadow: 5px 0px 10px #000;
+}
+
+/* BUSCA */
+.search {
+	color: #fff;
+	font-size: 14px;
+}
+.search input {
+	background: #333;
+	border: none;
+}
+.search .fa-search { 
+	position: absolute;
+	top: 10px;
+	left: 190px;
+}
+
+/* CONTAINER */
+#container ul {
+	color: #fff;
+}
+
+/*TITULOS - FILMES E SERIES*/
+#titulos {
+	width: 100%;
+	height: 100%
+	padding: 10px;
+}
+.titulo, .titulo img {
+	width: 148px;
+	min-height: 240px;
+	box-shadow: 3px 0px 8px #000;
+	display: inline-block;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	border-radius: 3px;
+}
+.titulo {
+	margin: 8px;
+}
+.titulo a {
+	color: #fff;
+	text-decoration: none;
+}
+.titulo a:hover {
+	color: #333;
+}
+.titulo img:hover {
+	opacity: 0.2;
+}
+.icones_filmes a {
+	float: left;
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	box-shadow: 5px 0px 10px #000;
+	color: #fff;
+	text-align: center;
+	padding-top: 30px;
+	margin-top: 30px;
+	font-size: 16px;
+}
