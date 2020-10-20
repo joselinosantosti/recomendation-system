@@ -17,12 +17,11 @@
         ul {
           list-style-type: none;
         }
-        #titulos h5 {
-          color: #fff;
-          margin-left: 10px;
-        }
         .nav-link {
           color: #bbb;
+        }
+        .titulo {
+        	padding: 10px;
         }
       </style>
 </head>
@@ -79,6 +78,9 @@
         </div> 
     
         <ul class="navbar">
+        	<li class="nav-item">
+            <a class="nav-link" href="" title="{{ usuario }}"><i class="fa fa-user"></i> {{ usuario }}</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="" title="Configurações"><i class="fa fa-gear"></i></a>
           </li>
@@ -92,7 +94,7 @@
             <a class="nav-link" href="" title="Minha lista"><i class="fa fa-list"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sair.php" title="Sair"><i class="fa fa-power-off"></i></a>
+            <a class="nav-link" href="" title="Sair"><i class="fa fa-power-off"></i></a>
           </li> 
         </ul>
     
@@ -103,49 +105,27 @@
       </nav>
     
       <div id="container">
-        <div id="filmes">
-          <div id="titulos">
-              <div class="titulo">
-                  <a href="" title="">
-                  <img src="{{ url_for('static', filename='img/matrix.jpg')}}" alt="Matrix">
-                  Matrix</a>
-            <div class="icones_filmes">
-                <a class="nav-link" href="" title="Favoritar"><i class="fa fa-heart"></i></a>
-                <a class="nav-link" href="" title="Adicionar a Minha lista"><i class="fa fa-list"></i></a>
-                <a class="nav-link" href="" title="Marcar como Visto"><i class="fa fa-eye"></i></a>
-            </div>
-            </div>
-    
-            <div class="titulo">
-                <a href="" title="">
-                <img src="{{ url_for('static', filename='img/matrix.jpg')}}" alt="Matrix">
-                Matrix
+        <div id="itens">
+          	<h2 class="titulo">Filmes recomendados para você</h2>
+         
+     		{% for filme in lista_filmes %}
+            <div class="item">
+                <a href="" title="{{ filme }}">
+                <img src="../static/img/{{ filme.replace(' ','').lower() }}.jpg" alt="{{ filme }}">
+                {{ filme }}
             </a>
             <div class="icones_filmes">
                 <a class="nav-link" href="" title="Favoritar"><i class="fa fa-heart"></i></a>
                 <a class="nav-link" href="" title="Adicionar a Minha lista"><i class="fa fa-list"></i></a>
                 <a class="nav-link" href="" title="Marcar como Visto"><i class="fa fa-eye"></i></a>
             </div>
-            </div>
-    
-            <div class="titulo">
-                <a href="" title="">
-                <img src="{{ url_for('static', filename='img/matrix.jpg')}}" alt="Matrix">
-                Matrix
-            </a>
-            <div class="icones_filmes">
-                <a class="nav-link" href="" title="Favoritar"><i class="fa fa-heart"></i></a>
-                <a class="nav-link" href="" title="Adicionar a Minha lista"><i class="fa fa-list"></i></a>
-                <a class="nav-link" href="" title="Marcar como Visto"><i class="fa fa-eye"></i></a>
-            </div>
-    
         </div>
+		    {% endfor  %}
             </div>
             </div>
-        </div>
-    
+
       <footer>
-        <p>Movie It @ Data atual</p>
+        <p>Movie It <i class="fa fa-copyright"></i> {{ data }}</p>
       </footer>
 </body>
 </html>

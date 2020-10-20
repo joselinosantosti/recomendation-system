@@ -34,12 +34,15 @@ nav {
 }
 
 /*TITULOS - FILMES E SERIES*/
-#titulos {
+h2.titulo {
+	padding: 10px;
+}
+#item {
 	width: 100%;
 	height: 100%
 	padding: 10px;
 }
-.titulo, .titulo img {
+.item, .item img {
 	width: 148px;
 	min-height: 240px;
 	box-shadow: 3px 0px 8px #000;
@@ -48,17 +51,17 @@ nav {
 	transition-duration: 0.4s;
 	border-radius: 3px;
 }
-.titulo {
+.item {
 	margin: 8px;
 }
-.titulo a {
+.item a {
 	color: #fff;
 	text-decoration: none;
 }
-.titulo a:hover {
+.item a:hover {
 	color: #333;
 }
-.titulo img:hover {
+.item img:hover {
 	opacity: 0.2;
 }
 .icones_filmes a {
