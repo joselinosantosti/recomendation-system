@@ -18,8 +18,11 @@ def recomenda():
 # 2. Dados
 O sistema recebe os dados de um banco MongoDB no seguinte formato de dicionário Python:
 ```
-db.filmes.insert({'Avatar': {'Luiz': 3.0,  'Lucas:': 2.5,  'Aline': 3.8,   'Jessica': 2.0 }})
+db.filmes.insert({'Avatar': {'Luiz': 3.0,  'Lucas:': 2.5,  'Aline': 3.8,   'Jessica': 2.0 }})`
 ```
+* Crie um banco de dados com o nome sistema_recomendacao: `use sistema`
+* Crie uma coleção com o nome filmes e já adiciona o primeiro filme: `db.filmes.insert('Freddy x Jason': {'Ana':2.5, 'Marcos': 3.0, 'Pedro':2.5,'Adriano':3.0,'Janaina':3})`
+* Alimente a base de dados com filmes variados
 
 # 3. Filtragem colaborativa
 O sistema possui um algoritmo de recomendação baseado em filtragem colaborativa. Cada usuário dá notas para vários itens e a partir do cálculo da distância euclidiana é possível verificar os usuários similares. As etapas são as seguintes.
