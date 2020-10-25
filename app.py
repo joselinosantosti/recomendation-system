@@ -1,9 +1,11 @@
 from flask import Flask, render_template, json, request
 from lib import recomendacao
 from datetime import datetime
+from db import Conexao
 
 app = Flask(__name__)
-_usuario = 'Pedro'
+
+_usuario = 'Leonardo'
 
 @app.route('/')
 def main():

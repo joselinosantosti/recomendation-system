@@ -1,8 +1,22 @@
-#import db
+from lib.db import Conexao
 from math import sqrt
 
 # Dados do Mongo
-#dadosMongo = db.lista_filmes()
+con = Conexao()
+dadosMongo = con.lista_filmes()
+
+avaliacoesItens = {}
+avaliacoesUsuarios = {}
+
+for dados in dadosMongo:
+	for k, v in dados.items():
+		avaliacoesItens[k] = v
+print(avaliacoesItens)
+
+for dados in dadosMongo:
+	for k, v in dados.items():
+		for k2, v2 in v:
+			print(k2)
 
 # Dados estaticos - Apenas para testes
 avaliacoes = {'Ana': 
@@ -57,54 +71,6 @@ avaliacoes = {'Ana':
               {'Divetidamente':4.0}
 }
 
-avaliacoesFilme = {'Matrix': 
-		{'Ana': 2.5, 
-		 'Marcos:': 3.0 ,
-		 'Pedro': 2.5, 
-		 'Adriano': 3.0, 
-		 'Janaina': 3.0 },
-	 
-	 'Vingadores': 
-		{'Ana': 3.5, 
-		 'Marcos': 3.5,
-		 'Pedro': 3.0, 
-		 'Claudia': 3.5, 
-		 'Adriano': 4.0, 
-		 'Janaina': 4.0,
-		 'Leonardo': 4.5 },
-				 
-	 'Star Trek': 
-		{'Ana': 3.0, 
-		 'Marcos:': 1.5,
-		 'Claudia': 3.0, 
-		 'Adriano': 2.0 },
-	
-	 'Exterminador do Futuro': 
-		{'Ana': 3.5, 
-		 'Marcos:': 5.0 ,
-		 'Pedro': 3.5, 
-		 'Claudia': 4.0, 
-		 'Adriano': 3.0, 
-		 'Janaina': 5.0,
-		 'Leonardo': 4.0},
-				 
-	 'Norbit': 
-		{'Ana': 2.5, 
-		 'Marcos:': 3.0 ,
-		 'Claudia': 2.5, 
-		 'Adriano': 2.0, 
-		 'Janaina': 3.5,
-		 'Leonardo': 1.0},
-				 
-	 'Star Wars': 
-		{'Ana': 3.0, 
-		 'Marcos:': 3.5,
-		 'Pedro': 4.0, 
-		 'Claudia': 4.5, 
-		 'Adriano': 3.0, 
-		 'Janaina': 3.0}
-}
-
 # Distancia euclidiana
 def euclidiana(base, filme1, filme2):
     si = {} # Criando um dicionário vazio para armazenar as similaridades
@@ -134,7 +100,7 @@ def getSimilares(base, filme):
     return similaridade[0:30] # 30 primeiros registros
 
 # Função Itens similares
-def calculaItensSimilares(base=avaliacoesFilme):
+def calculaItensSimilares(base=avaliacoesItens):
     result = {}
     for i in base:
         notas = getSimilares(base,  i)
@@ -143,8 +109,8 @@ def calculaItensSimilares(base=avaliacoesFilme):
     print( )
 
 # Salva os dados na variavel
-itensSimilares = calculaItensSimilares(avaliacoesFilme)
-
+itensSimilares = calculaItensSimilares(avaliacoesItens)
+print(itensSimilares)
 # Função recomendar
 def getRecomendacoesItens(baseUsuario=avaliacoes, similaridadeItens=itensSimilares, usuario='Leonardo'):
     notasUsuario = baseUsuario[usuario]

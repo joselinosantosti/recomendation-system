@@ -1,13 +1,15 @@
 from pymongo import MongoClient
 
-conexao = MongoClient('mongodb://localhost:27017')
+class Conexao:
+    def __init__(self):
+        self.conexao = MongoClient('mongodb://localhost:27017')
 
-# Banco recomendacao
-db = conexao.recomendacao
+        # Banco recomendacao
+        self.db = self.conexao.recomendacao
 
-# Coleção filmes
-col_filmes = db.filmes
+        # Coleção filmes
+        self.col_filmes = self.db.filmes
 
-# Documentos - Sem id
-def lista_filmes():
-    return col_filmes.find({}, {"_id":0})
+    # Documentos - Sem id
+    def lista_filmes(self):
+        return self.col_filmes.find({}, {"_id":0})
