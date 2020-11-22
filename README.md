@@ -1,6 +1,8 @@
 # Sistema de recomendação de filmes
 Pode ser aplicado a filmes, músicas, produtos e muito mais.
 
+![Sistema de recomendação](https://github.com/joselinosantosti/recomendation-system/blob/master/filmes.png)
+
 Desenvolvido com Python, Flask e MongoDB
 
 # 1. Estrutura
@@ -31,7 +33,7 @@ O sistema possui um algoritmo de recomendação baseado em filtragem colaborativ
 * Calcular a similaridade de todos os itens e salvar em uma variável. Essa abordagem(por itens) torna o algoritmo mais rápido que por usuários visto que a frequência de dados de itens inseridos na base é muito menor que a frequência de novos usuários.
 
 # 4. Recomendação
-getRecomendacoesItens >
+getRecomendacoesItens \n
 Com esses dados a próxima etapa é recomendar os itens. Para isso o algoritmo realiza outros cálculos para dar maior peso aos itens mais relevantes. A recomendação por itens é mais recomendada, pois os dados ficam salvos em uma variável, arquivo ou no banco, agilizando as consultas.
 
 # 5. Exibição dos dados na Web
