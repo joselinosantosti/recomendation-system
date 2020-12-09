@@ -1,9 +1,8 @@
 # Sistema de recomendação de filmes
 ## Pode ser aplicado a filmes, músicas, produtos e muito mais.
+## Desenvolvido com Python, Flask e MongoDB
 
 ![Sistema de recomendação](https://github.com/joselinosantosti/recomendation-system/blob/master/filmes.png)
-
-## Desenvolvido com Python, Flask e MongoDB
 
 # 1. Estrutura
 A pasta principal contém o seguinte:
