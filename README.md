@@ -36,5 +36,6 @@ O sistema possui um algoritmo de recomendação baseado em filtragem colaborativ
 Com esses dados a próxima etapa é recomendar os itens. Para isso o algoritmo realiza outros cálculos para dar maior peso aos itens mais relevantes. A recomendação por itens é mais recomendada, pois os dados ficam salvos em uma variável, arquivo ou no banco, agilizando as consultas.
 
 # 5. Exibição dos dados na Web
-A App possui uma função para renderizar os dados na interface Web. Para executar acesse o diretório principal através do terminal e execute: `python app.py`
-Acesse o navegador e digite o endereço e porta vistos no terminal. O padrão é a própria máquina e porta 5000 http://127.0.0.1:5000/.
+A App possui uma função para renderizar os dados na interface Web. Para executar acesse o diretório principal através do terminal e execute:<br>
+`python app.py`<br>
+Acesse o navegador e digite o endereço e porta vistos no terminal. O padrão é 127.0.0.1(a própria máquina) e porta 5000 http://127.0.0.1:5000/.
