@@ -1,7 +1,7 @@
 from flask import Flask, render_template, json, request
 from lib import recomendacao
 from datetime import datetime
-from db import Conexao
+from lib.db import Conexao
 
 app = Flask(__name__)
 
@@ -21,4 +21,4 @@ def retorna_dados():
 	return dict(data=_data, usuario=_usuario)
 
 if __name__ == "__main__":
-	app.run()
+    app.run(host='0.0.0.0', port=8080)

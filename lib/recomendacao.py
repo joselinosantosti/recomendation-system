@@ -13,11 +13,6 @@ for dados in dadosMongo:
 		avaliacoesItens[k] = v
 print(avaliacoesItens)
 
-for dados in dadosMongo:
-	for k, v in dados.items():
-		for k2, v2 in v:
-			print(k2)
-
 # Dados estaticos - Apenas para testes
 avaliacoes = {'Ana': 
 		{'Matrix': 2.5, 
@@ -106,11 +101,11 @@ def calculaItensSimilares(base=avaliacoesItens):
         notas = getSimilares(base,  i)
         result[i] = notas
     return result
-    print( )
+    print()
 
 # Salva os dados na variavel
 itensSimilares = calculaItensSimilares(avaliacoesItens)
-print(itensSimilares)
+
 # Função recomendar
 def getRecomendacoesItens(baseUsuario=avaliacoes, similaridadeItens=itensSimilares, usuario='Leonardo'):
     notasUsuario = baseUsuario[usuario]
