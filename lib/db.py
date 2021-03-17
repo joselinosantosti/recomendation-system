@@ -7,8 +7,8 @@ class Conexao:
         # Banco recomendacao
         self.db = self.conexao.recomendacao
 
-        # Coleção filmes
-        self.col_filmes = self.db.filmes
+        # Colecao filmes
+        self.col_filmes = self.db.db_filmes
 
     # Documentos - Sem id
     def lista_filmes(self):

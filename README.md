@@ -1,7 +1,18 @@
 # Sistema de recomendação de filmes
 Pode ser aplicado a filmes, músicas, produtos e muito mais.
 
-Desenvolvido com Python, Flask e MongoDB
+# Features
+* Python
+* Flask
+* MongoDB
+* Bootstrap 4
+
+# Getting started
+1. Clone o repositório usando git clone 
+2. Acesse o diretório que contém o projeto clonado
+3. Execute pip install requirements.txt para instalar as dependências
+4. Criar e popular o banco
+5. Execute python app.py
 
 # 1. Estrutura
 A pasta principal contém o seguinte:
